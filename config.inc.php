@@ -26,10 +26,10 @@
 
 ; Set this to On once the system has been installed
 ; (This is generally done automatically by the installer)
-installed = Off
+installed = On
 
 ; The canonical URL to the OJS installation (excluding the trailing slash)
-base_url = "http://pkp.sfu.ca/ojs"
+base_url = "http://ojs.org"
 
 ; Session cookie name
 session_cookie_name = OJSSID
@@ -113,7 +113,7 @@ enable_minified = On
 
 ; Provide a unique site ID and OAI base URL to PKP for statistics and security
 ; alert purposes only.
-enable_beacon = On
+enable_beacon = 1
 
 
 ;;;;;;;;;;;;;;;;;;;;;
@@ -124,9 +124,9 @@ enable_beacon = On
 
 driver = mysql
 host = localhost
-username = ojs
-password = ojs
-name = ojs
+username = root
+password = 
+name = ojs2
 
 ; Enable persistent connections
 persistent = Off
@@ -206,7 +206,7 @@ charset_normalization = Off
 ; Complete path to directory to store uploaded files
 ; (This directory should not be directly web-accessible)
 ; Windows users should use forward slashes
-files_dir = files
+files_dir = "Z:/home/ojs.org/files"
 
 ; Path to the directory to store public uploaded files
 ; (This directory should be web-accessible and the specified path
@@ -381,7 +381,7 @@ result_cache_hours = 1
 oai = On
 
 ; OAI Repository identifier
-repository_id = ojs.pkp.sfu.ca
+repository_id = "ojs2.ojs.org"
 
 ; Maximum number of records per request to serve via OAI
 oai_max_records = 100
