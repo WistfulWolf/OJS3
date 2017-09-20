@@ -21,40 +21,7 @@
 	{rdelim});
 </script>
 
-<ul id="navigationContextMenu" class="pkp_nav_context pkp_nav_list" role="navigation" aria-label="{translate|escape key="common.navigation.siteContext"}">
-
-	<li {if $multipleContexts}class="submenuOpensBelow"{/if} aria-haspopup="true" aria-expanded="false">
-		<span class="pkp_screen_reader">
-			{translate key="context.current"}
-		</span>
-
-		<a href="#" class="pkp_current_context">
-			{if $displayPageHeaderTitle && is_string($displayPageHeaderTitle)}
-				{$displayPageHeaderTitle}
-			{elseif $currentContextName}
-				{$currentContextName}
-			{else}
-				{$applicationName}
-			{/if}
-		</a>
-
-		{if $multipleContexts}
-			<h3 class="pkp_screen_reader">
-				{translate key="context.select"}
-			</h3>
-			<ul class="pkp_contexts">
-				{foreach from=$contextsNameAndUrl key=url item=name}
-					{if $currentContextName == $name}{php}continue;{/php}{/if}
-					<li>
-						<a href="{$url}">
-							{$name}
-						</a>
-					</li>
-				{/foreach}
-			</ul>
-		{/if}
-	</li>
-</ul>
+{$dropDownTopLeftMenu}
 
 <script type="text/javascript">
 	// Attach the JS file tab handler.
