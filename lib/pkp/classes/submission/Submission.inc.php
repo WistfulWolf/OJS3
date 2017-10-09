@@ -257,14 +257,14 @@ abstract class Submission extends DataObject {
 		$authors = $this->getAuthors();
 		if (is_array($authors) && !empty($authors)) {
 			$author = $authors[0];
-			return $lastOnly ? $author->getLastName() : $author->getFullName();
+			return $lastOnly ? $author->getLocalizedLastName() : $author->getFullName();
 		} else {
 			return null;
 		}
 	}
 
 	/**
-	 * Return string of author names, separated by the specified token
+	 * Return localized string of author names, separated by the specified token
 	 * @param $lastOnly boolean return list of lastnames only (default false)
 	 * @param $nameSeparator string Separator for names (default comma+space)
 	 * @param $userGroupSeparator string Separator for user groups (default semicolon+space)
@@ -287,7 +287,7 @@ abstract class Submission extends DataObject {
 					$str .= $nameSeparator;
 				}
 			}
-			$str .= $lastOnly ? $author->getLastName() : $author->getFullName();
+			$str .= $lastOnly ? $author->getLocalizedLastName() : $author->getFullName();
 			$lastUserGroupId = $author->getUserGroupId();
 		}
 
@@ -301,7 +301,7 @@ abstract class Submission extends DataObject {
 	}
 
 	/**
-	 * Return short author names string.
+	 * Return localized short author names string.
 	 * @return string
 	 */
 	function getShortAuthorString() {
@@ -314,7 +314,7 @@ abstract class Submission extends DataObject {
 		}
 		if (!$primaryAuthor) return '';
 
-		$authorString = $primaryAuthor->getLastName();
+		$authorString = $primaryAuthor->getLocalizedLastName();
 		AppLocale::requireComponents(LOCALE_COMPONENT_PKP_SUBMISSION);
 		if (count($authors) > 1) $authorString = __('submission.shortAuthor', array('author' => $authorString));
 		return $authorString;

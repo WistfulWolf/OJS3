@@ -262,9 +262,9 @@ class PKPSubmissionSubmitStep1Form extends SubmissionSubmitForm {
 			// Set user to initial author
 			$authorDao = DAORegistry::getDAO('AuthorDAO');
 			$author = $authorDao->newDataObject();
-			$author->setFirstName($user->getFirstName());
-			$author->setMiddleName($user->getMiddleName());
-			$author->setLastName($user->getLastName());
+			$author->setFirstName($user->getFirstName(null), null);
+			$author->setMiddleName($user->getMiddleName(null), null);
+			$author->setLastName($user->getLastName(null), null);
 			$author->setAffiliation($user->getAffiliation(null), null);
 			$author->setCountry($user->getCountry());
 			$author->setEmail($user->getEmail());

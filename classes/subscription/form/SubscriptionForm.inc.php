@@ -98,9 +98,9 @@ class SubscriptionForm extends Form {
 		$templateMgr->assign('userId', $user->getId());
 		$templateMgr->assign('username', $user->getUsername());
 		$templateMgr->assign('userSalutation', $user->getSalutation());
-		$templateMgr->assign('userFirstName', $user->getFirstName());
-		$templateMgr->assign('userMiddleName', $user->getMiddleName());
-		$templateMgr->assign('userLastName', $user->getLastName());
+		$templateMgr->assign('userFirstName', $user->getFirstName(null)); // Localized
+		$templateMgr->assign('userMiddleName', $user->getMiddleName(null)); // Localized
+		$templateMgr->assign('userLastName', $user->getLastName(null)); // Localized
 		$templateMgr->assign('userInitials', $user->getInitials());
 		$templateMgr->assign('userGender', $user->getGender());
 		$templateMgr->assign('userAffiliation', $user->getAffiliation(null)); // Localized
@@ -141,9 +141,9 @@ class SubscriptionForm extends Form {
 				'dateEnd' => $subscription->getDateEnd(),
 				'username', $user->getUsername(),
 				'userSalutation', $user->getSalutation(),
-				'userFirstName', $user->getFirstName(),
-				'userMiddleName', $user->getMiddleName(),
-				'userLastName', $user->getLastName(),
+				'userFirstName', $user->getFirstName(null),
+				'userMiddleName', $user->getMiddleName(null),
+				'userLastName', $user->getLastName(null),
 				'userInitials', $user->getInitials(),
 				'userGender', $user->getGender(),
 				'userAffiliation', $user->getAffiliation(null),

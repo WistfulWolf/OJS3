@@ -63,7 +63,7 @@ class ReviewAssignmentDAO extends DAO {
 		$result = $this->retrieve($query, $queryParams);
 
 		while (!$result->EOF) {
-			$reviewAssignments[$result->fields['review_id']] = $this->_fromRow($result->GetRowAssoc(false));
+			$reviewAssignments[$result->fields['review_id']] = $this->_returnReviewAssignmentFromRowWithData($result->GetRowAssoc(false));
 			$result->MoveNext();
 		}
 
@@ -104,7 +104,7 @@ class ReviewAssignmentDAO extends DAO {
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = $this->_fromRow($result->GetRowAssoc(false));
+			$returner = $this->_returnReviewAssignmentFromRowWithData($result->GetRowAssoc(false));
 		}
 
 		$result->Close();
@@ -131,7 +131,7 @@ class ReviewAssignmentDAO extends DAO {
 
 			$returner = null;
 			if ($result->RecordCount() != 0) {
-				$returner = $this->_fromRow($result->GetRowAssoc(false));
+				$returner = $this->_returnReviewAssignmentFromRowWithData($result->GetRowAssoc(false));
 			}
 
 			$result->Close();
@@ -160,7 +160,7 @@ class ReviewAssignmentDAO extends DAO {
 			);
 
 			while (!$result->EOF) {
-				$reviewAssignments[] = $this->_fromRow($result->GetRowAssoc(false));
+				$reviewAssignments[] = $this->_returnReviewAssignmentFromRowWithData($result->GetRowAssoc(false));
 				$result->MoveNext();
 			}
 
@@ -239,7 +239,7 @@ class ReviewAssignmentDAO extends DAO {
 			);
 
 			while (!$result->EOF) {
-				$reviewAssignments[] = $this->_fromRow($result->GetRowAssoc(false));
+				$reviewAssignments[] = $this->_returnReviewAssignmentFromRowWithData($result->GetRowAssoc(false));
 				$result->MoveNext();
 			}
 
@@ -293,7 +293,7 @@ class ReviewAssignmentDAO extends DAO {
 			);
 
 			while (!$result->EOF) {
-				$reviewAssignments[] = $this->_fromRow($result->GetRowAssoc(false));
+				$reviewAssignments[] = $this->_returnReviewAssignmentFromRowWithData($result->GetRowAssoc(false));
 				$result->MoveNext();
 			}
 
@@ -327,7 +327,7 @@ class ReviewAssignmentDAO extends DAO {
 			);
 
 			while (!$result->EOF) {
-				$reviewAssignments[] = $this->_fromRow($result->GetRowAssoc(false));
+				$reviewAssignments[] = $this->_returnReviewAssignmentFromRowWithData($result->GetRowAssoc(false));
 				$result->MoveNext();
 			}
 
@@ -493,7 +493,6 @@ class ReviewAssignmentDAO extends DAO {
 		$reviewAssignment->setId($row['review_id']);
 		$reviewAssignment->setSubmissionId($row['submission_id']);
 		$reviewAssignment->setReviewerId($row['reviewer_id']);
-		$reviewAssignment->setReviewerFullName($row['first_name'].' '.$row['last_name']);
 		$reviewAssignment->setCompetingInterests($row['competing_interests']);
 		$reviewAssignment->setRecommendation($row['recommendation']);
 		$reviewAssignment->setDateAssigned($this->datetimeFromDB($row['date_assigned']));
@@ -517,6 +516,18 @@ class ReviewAssignmentDAO extends DAO {
 		$reviewAssignment->setReviewMethod($row['review_method']);
 		$reviewAssignment->setStageId($row['stage_id']);
 		$reviewAssignment->setUnconsidered($row['unconsidered']);
+
+		return $reviewAssignment;
+	}
+
+	/**
+	 * Internal functoin to  return a ReviewAssignment object from a given row.
+	 * @param $row array
+	 * @return ReviewAssignment
+	 */
+	 function _returnReviewAssignmentFromRowWithData($row) {
+		$reviewAssignment = $this->_fromRow($row);
+		$this->getDataObjectSettings('user_settings', 'user_id', $row['reviewer_id'], $reviewAssignment);
 
 		return $reviewAssignment;
 	}
@@ -602,7 +613,7 @@ class ReviewAssignmentDAO extends DAO {
 
 		$returner = null;
 		if ($result->RecordCount() != 0) {
-			$returner = $this->_fromRow($result->GetRowAssoc(false));
+			$returner = $this->_returnReviewAssignmentFromRowWithData($result->GetRowAssoc(false));
 		}
 
 		$result->Close();

@@ -359,10 +359,7 @@ class PKPUserDAO extends DAO {
 		$user->setUsername($row['username']);
 		$user->setPassword($row['password']);
 		$user->setSalutation($row['salutation']);
-		$user->setFirstName($row['first_name']);
-		$user->setMiddleName($row['middle_name']);
 		$user->setInitials($row['initials']);
-		$user->setLastName($row['last_name']);
 		$user->setSuffix($row['suffix']);
 		$user->setGender($row['gender']);
 		$user->setEmail($row['email']);
@@ -401,18 +398,15 @@ class PKPUserDAO extends DAO {
 		}
 		$this->update(
 			sprintf('INSERT INTO users
-				(username, password, salutation, first_name, middle_name, initials, last_name, suffix, gender, email, url, phone, mailing_address, billing_address, country, locales, date_last_email, date_registered, date_validated, date_last_login, must_change_password, disabled, disabled_reason, auth_id, auth_str, inline_help)
+				(username, password, salutation, initials, suffix, gender, email, url, phone, mailing_address, billing_address, country, locales, date_last_email, date_registered, date_validated, date_last_login, must_change_password, disabled, disabled_reason, auth_id, auth_str, inline_help)
 				VALUES
-				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, %s, %s, %s, %s, ?, ?, ?, ?, ?, ?)',
+				(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, %s, %s, %s, %s, ?, ?, ?, ?, ?, ?)',
 				$this->datetimeToDB($user->getDateLastEmail()), $this->datetimeToDB($user->getDateRegistered()), $this->datetimeToDB($user->getDateValidated()), $this->datetimeToDB($user->getDateLastLogin())),
 			array(
 				$user->getUsername(),
 				$user->getPassword(),
 				$user->getSalutation(),
-				$user->getFirstName(),
-				$user->getMiddleName(),
 				$user->getInitials(),
-				$user->getLastName(),
 				$user->getSuffix(),
 				$user->getGender(),
 				$user->getEmail(),
@@ -440,7 +434,7 @@ class PKPUserDAO extends DAO {
 	 * @copydoc DAO::getLocaleFieldNames
 	 */
 	function getLocaleFieldNames() {
-		return array('biography', 'signature', 'gossip', 'affiliation');
+		return array('biography', 'signature', 'gossip', 'affiliation', 'firstName', 'middleName', 'lastName');
 	}
 
 	/**
@@ -477,10 +471,7 @@ class PKPUserDAO extends DAO {
 				SET	username = ?,
 					password = ?,
 					salutation = ?,
-					first_name = ?,
-					middle_name = ?,
 					initials = ?,
-					last_name = ?,
 					suffix = ?,
 					gender = ?,
 					email = ?,
@@ -505,10 +496,7 @@ class PKPUserDAO extends DAO {
 				$user->getUsername(),
 				$user->getPassword(),
 				$user->getSalutation(),
-				$user->getFirstName(),
-				$user->getMiddleName(),
 				$user->getInitials(),
-				$user->getLastName(),
 				$user->getSuffix(),
 				$user->getGender(),
 				$user->getEmail(),
@@ -553,18 +541,17 @@ class PKPUserDAO extends DAO {
 	 * @return string
 	 */
 	function getUserFullName($userId, $allowDisabled = true) {
-		$result = $this->retrieve(
-			'SELECT first_name, middle_name, last_name, suffix FROM users WHERE user_id = ?' . ($allowDisabled?'':' AND disabled = 0'),
-			array((int) $userId)
-		);
+		$userData = $this->getById($userId, $allowDisabled);
 
-		if($result->RecordCount() == 0) {
+		if($userData == null) {
 			$returner = false;
 		} else {
-			$returner = $result->fields[0] . ' ' . (empty($result->fields[1]) ? '' : $result->fields[1] . ' ') . $result->fields[2] . (empty($result->fields[3]) ? '' : ', ' . $result->fields[3]);
+			$middleName = $userData->getLocalizedMiddleName();
+			$suffix = $userData->getSuffix();
+
+			$returner = $userData->getLocalizedFirstName() . ' ' . (empty($middleName) ? '' : $middleName . ' ') . $userData->getLocalizedLastName() . (empty($suffix) ? '' : ', ' . $suffix);
 		}
 
-		$result->Close();
 		return $returner;
 	}
 

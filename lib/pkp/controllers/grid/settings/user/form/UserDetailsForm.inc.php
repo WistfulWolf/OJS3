@@ -52,8 +52,8 @@ class UserDetailsForm extends UserForm {
 			$this->addCheck(new FormValidatorLength($this, 'password', 'optional', 'user.register.form.passwordLengthRestriction', '>=', $site->getMinPasswordLength()));
 			$this->addCheck(new FormValidatorCustom($this, 'password', 'optional', 'user.register.form.passwordsDoNotMatch', create_function('$password,$form', 'return $password == $form->getData(\'password2\');'), array($this)));
 		}
-		$this->addCheck(new FormValidator($this, 'firstName', 'required', 'user.profile.form.firstNameRequired'));
-		$this->addCheck(new FormValidator($this, 'lastName', 'required', 'user.profile.form.lastNameRequired'));
+		$this->addCheck(new FormValidatorLocale($this, 'firstName', 'required', 'user.profile.form.firstNameRequired'));
+		$this->addCheck(new FormValidatorLocale($this, 'lastName', 'required', 'user.profile.form.lastNameRequired'));
 		$this->addCheck(new FormValidatorUrl($this, 'userUrl', 'optional', 'user.profile.form.urlInvalid'));
 		$this->addCheck(new FormValidatorEmail($this, 'email', 'required', 'user.profile.form.emailRequired'));
 		$this->addCheck(new FormValidatorCustom($this, 'email', 'required', 'user.register.form.emailExists', array(DAORegistry::getDAO('UserDAO'), 'userExistsByEmail'), array($this->userId, true), true));
@@ -82,9 +82,9 @@ class UserDetailsForm extends UserForm {
 				'authId' => $user->getAuthId(),
 				'username' => $user->getUsername(),
 				'salutation' => $user->getSalutation(),
-				'firstName' => $user->getFirstName(),
-				'middleName' => $user->getMiddleName(),
-				'lastName' => $user->getLastName(),
+				'firstName' => $user->getFirstName(null),  // Localized
+				'middleName' => $user->getMiddleName(null),  // Localized
+				'lastName' => $user->getLastName(null),  // Localized
 				'suffix' => $user->getSuffix(),
 				'signature' => $user->getSignature(null), // Localized
 				'initials' => $user->getInitials(),
@@ -104,9 +104,9 @@ class UserDetailsForm extends UserForm {
 			$author = $this->author;
 			$data = array(
 				'salutation' => $author->getSalutation(),
-				'firstName' => $author->getFirstName(),
-				'middleName' => $author->getMiddleName(),
-				'lastName' => $author->getLastName(),
+				'firstName' => $author->getFirstName(null),  // Localized
+				'middleName' => $author->getMiddleName(null),  // Localized
+				'lastName' => $author->getLastName(null),  // Localized
 				'affiliation' => $author->getAffiliation(null), // Localized
 				'email' => $author->getEmail(),
 				'userUrl' => $author->getUrl(),
@@ -237,9 +237,9 @@ class UserDetailsForm extends UserForm {
 		}
 
 		$user->setSalutation($this->getData('salutation'));
-		$user->setFirstName($this->getData('firstName'));
-		$user->setMiddleName($this->getData('middleName'));
-		$user->setLastName($this->getData('lastName'));
+		$user->setFirstName($this->getData('firstName'), null); // Localized
+		$user->setMiddleName($this->getData('middleName'), null); // Localized
+		$user->setLastName($this->getData('lastName'), null); // Localized
 		$user->setSuffix($this->getData('suffix'));
 		$user->setInitials($this->getData('initials'));
 		$user->setGender($this->getData('gender'));

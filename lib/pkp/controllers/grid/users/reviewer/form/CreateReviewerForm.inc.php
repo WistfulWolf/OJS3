@@ -25,8 +25,8 @@ class CreateReviewerForm extends ReviewerForm {
 		parent::__construct($submission, $reviewRound);
 		$this->setTemplate('controllers/grid/users/reviewer/form/createReviewerForm.tpl');
 
-		$this->addCheck(new FormValidator($this, 'firstName', 'required', 'user.profile.form.firstNameRequired'));
-		$this->addCheck(new FormValidator($this, 'lastName', 'required', 'user.profile.form.lastNameRequired'));
+		$this->addCheck(new FormValidatorLocale($this, 'firstName', 'required', 'user.profile.form.firstNameRequired'));
+		$this->addCheck(new FormValidatorLocale($this, 'lastName', 'required', 'user.profile.form.lastNameRequired'));
 		$this->addCheck(new FormValidatorCustom($this, 'username', 'required', 'user.register.form.usernameExists', array(DAORegistry::getDAO('UserDAO'), 'userExistsByUsername'), array(), true));
 		$this->addCheck(new FormValidatorUsername($this, 'username', 'required', 'user.register.form.usernameAlphaNumeric'));
 		$this->addCheck(new FormValidatorEmail($this, 'email', 'required', 'user.profile.form.emailRequired'));
@@ -75,9 +75,9 @@ class CreateReviewerForm extends ReviewerForm {
 		$userDao = DAORegistry::getDAO('UserDAO');
 		$user = $userDao->newDataObject();
 
-		$user->setFirstName($this->getData('firstName'));
-		$user->setMiddleName($this->getData('middleName'));
-		$user->setLastName($this->getData('lastName'));
+		$user->setFirstName($this->getData('firstName'), null); // Localized
+		$user->setMiddleName($this->getData('middleName'), null); // Localized
+		$user->setLastName($this->getData('lastName'), null); // Localized
 		$user->setEmail($this->getData('email'));
 
 		$authDao = DAORegistry::getDAO('AuthSourceDAO');

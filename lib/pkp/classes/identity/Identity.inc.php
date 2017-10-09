@@ -27,7 +27,7 @@ class Identity extends DataObject {
 	}
 
 	/**
-	 * Get the identity's complete name.
+	 * Get the identity's localized complete name.
 	 * Includes first name, middle name (if applicable), and last name.
 	 * @param $lastFirst boolean False / default: Firstname Middle Lastname
 	 * 	If true: Lastname, Firstname Middlename
@@ -35,9 +35,9 @@ class Identity extends DataObject {
 	 */
 	function getFullName($lastFirst = false) {
 		$salutation = $this->getData('salutation');
-		$firstName = $this->getData('firstName');
-		$middleName = $this->getData('middleName');
-		$lastName = $this->getData('lastName');
+		$firstName = $this->getLocalizedData('firstName');
+		$middleName = $this->getLocalizedData('middleName');
+		$lastName = $this->getLocalizedData('lastName');
 		$suffix = $this->getData('suffix');
 		if ($lastFirst) {
 			return "$lastName, " . ($salutation != ''?"$salutation ":'') . $firstName . ($middleName != ''?" $middleName":'');
@@ -49,51 +49,80 @@ class Identity extends DataObject {
 
 	/**
 	 * Get first name.
+	 * @param $locale string
 	 * @return string
 	 */
-	function getFirstName() {
-		return $this->getData('firstName');
+	function getFirstName($locale) {
+		return $this->getData('firstName', $locale);
+	}
+
+	/**
+	 * Get first name.
+	 * @return string
+	 */
+	 function getLocalizedFirstName() {
+		return $this->getLocalizedData('firstName');
 	}
 
 	/**
 	 * Set first name.
 	 * @param $firstName string
+	 * @param $locale string
 	 */
-	function setFirstName($firstName) {
-		$this->setData('firstName', $firstName);
+	function setFirstName($firstName, $locale) {
+		$this->setData('firstName', $firstName, $locale);
 	}
 
+	/**
+	 * Get middle name.
+	 * @param $locale string
+	 * @return string
+	 */
+	function getMiddleName($locale) {
+		return $this->getData('middleName', $locale);
+	}
 
 	/**
 	 * Get middle name.
 	 * @return string
 	 */
-	function getMiddleName() {
-		return $this->getData('middleName');
+	 function getLocalizedMiddleName() {
+		return $this->getLocalizedData('middleName');
 	}
 
 	/**
 	 * Set middle name.
 	 * @param $middleName string
+	 * @param $locale string
 	 */
-	function setMiddleName($middleName) {
-		$this->setData('middleName', $middleName);
+	function setMiddleName($middleName, $locale) {
+		$this->setData('middleName', $middleName, $locale);
+	}
+
+	/**
+	 * Get last name.
+	 * @param $locale string
+	 * @return string
+	 */
+	function getLastName($locale) {
+		return $this->getData('lastName', $locale);
 	}
 
 	/**
 	 * Get last name.
 	 * @return string
 	 */
-	function getLastName() {
-		return $this->getData('lastName');
+	 function getLocalizedLastName() {
+		return $this->getLocalizedData('lastName');
 	}
 
 	/**
 	 * Set last name.
 	 * @param $lastName string
+	 * @param $locale string
 	 */
-	function setLastName($lastName) {
-		$this->setData('lastName', $lastName);
+	function setLastName($lastName, $locale) {
+		$this->setData('lastName', $lastName, $locale);
 	}
 
 	/**

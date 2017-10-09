@@ -65,7 +65,7 @@ class SectionGridHandler extends SetupGridHandler {
 			} else {
 				$editors = array();
 				foreach ($assignedSubEditors as $subEditor) {
-					$editors[] = $subEditor->getLastName();
+					$editors[] = $subEditor->getLocalizedLastName();
 				}
 				$editorsString = implode(', ', $editors);
 			}

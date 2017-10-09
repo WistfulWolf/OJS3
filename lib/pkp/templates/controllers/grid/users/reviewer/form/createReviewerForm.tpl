@@ -45,9 +45,9 @@
 	{/if}
 
 	{fbvFormSection title="common.name"}
-		{fbvElement type="text" label="user.firstName" id="firstName" value=$firstName required="true" inline=true size=$fbvStyles.size.SMALL}
-		{fbvElement type="text" label="user.middleName" id="middleName" value=$middleName inline=true size=$fbvStyles.size.SMALL}
-		{fbvElement type="text" label="user.lastName" id="lastName" value=$lastName required="true" inline=true size=$fbvStyles.size.MEDIUM}
+		{fbvElement type="text" label="user.firstName" id="firstName" value=$firstName required="true" inline=true size=$fbvStyles.size.SMALL multilingual="true"}
+		{fbvElement type="text" label="user.middleName" id="middleName" value=$middleName inline=true size=$fbvStyles.size.SMALL multilingual="true"}
+		{fbvElement type="text" label="user.lastName" id="lastName" value=$lastName required="true" inline=true size=$fbvStyles.size.MEDIUM multilingual="true"}
 	{/fbvFormSection}
 
 	{fbvFormSection title="user.username" required="true"}
