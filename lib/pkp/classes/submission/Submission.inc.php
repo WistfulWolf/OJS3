@@ -739,18 +739,29 @@ abstract class Submission extends DataObject {
 
 	/**
 	 * Get citations.
+	 * @param $locale string
 	 * @return string
 	 */
-	function getCitations() {
-		return $this->getData('citations');
+	function getCitations($locale) {
+		return $this->getData('citations', $locale);
 	}
+
+	/**
+	 * Get citations.
+	 * @return string
+	 */
+	 function getLocalizedCitations() {
+		return $this->getLocalizedData('citations');
+	}
+
 
 	/**
 	 * Set citations.
 	 * @param $citations string
+	 * @param $locale string
 	 */
-	function setCitations($citations) {
-		$this->setData('citations', $citations);
+	function setCitations($citations, $locale) {
+		$this->setData('citations', $citations, $locale);
 	}
 
 	/**

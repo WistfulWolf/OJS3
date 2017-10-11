@@ -76,7 +76,7 @@ class PKPSubmissionMetadataFormImplementation {
 				'type' => $submission->getType(null), // Localized
 				'source' =>$submission->getSource(null), // Localized
 				'rights' => $submission->getRights(null), // Localized
-				'citations' => $submission->getCitations(),
+				'citations' => $submission->getCitations(null), // Localized
 				'locale' => $submission->getLocale(),
 			);
 
@@ -117,7 +117,7 @@ class PKPSubmissionMetadataFormImplementation {
 	 * @return array
 	 */
 	function getLocaleFieldNames() {
-		return array('title', 'prefix', 'subtitle', 'abstract', 'coverage', 'type', 'source', 'rights');
+		return array('title', 'prefix', 'subtitle', 'abstract', 'coverage', 'type', 'source', 'rights', 'citations');
 	}
 
 	/**
@@ -138,7 +138,7 @@ class PKPSubmissionMetadataFormImplementation {
 		$submission->setType($this->_parentForm->getData('type'), null); // Localized
 		$submission->setRights($this->_parentForm->getData('rights'), null); // Localized
 		$submission->setSource($this->_parentForm->getData('source'), null); // Localized
-		$submission->setCitations($this->_parentForm->getData('citations'));
+		$submission->setCitations($this->_parentForm->getData('citations'), null); // Localized
 
 		// Update submission locale
 		$newLocale = $this->_parentForm->getData('locale');

@@ -12,7 +12,7 @@
 <div id="citation">
 {literal}
 <textarea style="width:100%;height:20em;font-family:monospace;font-size:0.85em;line-height:1.2em;">@article{{/literal}{$journal->getLocalizedAcronym()|bibtex_escape}{$articleId|bibtex_escape}{literal},
-	author = {{/literal}{assign var=authors value=$article->getAuthors()}{foreach from=$authors item=author name=authors key=i}{assign var=firstName value=$author->getFirstName()}{assign var=authorCount value=$authors|@count}{$firstName|bibtex_escape} {$author->getLastName()|bibtex_escape}{if $i<$authorCount-1} {translate key="common.and"} {/if}{/foreach}{literal}},
+	author = {{/literal}{assign var=authors value=$article->getAuthors()}{foreach from=$authors item=author name=authors key=i}{assign var=firstName value=$author->getLocalizedFirstName()}{assign var=authorCount value=$authors|@count}{$firstName|bibtex_escape} {$author->getLocalizedLastName()|bibtex_escape}{if $i<$authorCount-1} {translate key="common.and"} {/if}{/foreach}{literal}},
 	title = {{/literal}{$article->getLocalizedTitle()|strip_tags|bibtex_escape}{literal}},
 	journal = {{/literal}{$journal->getLocalizedName()|bibtex_escape}{literal}},
 {/literal}{if $issue}{if $issue->getShowVolume()}{literal}	volume = {{/literal}{$issue->getVolume()|bibtex_escape}{literal}},{/literal}{/if}{literal}
