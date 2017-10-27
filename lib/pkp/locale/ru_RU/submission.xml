@@ -313,7 +313,7 @@
 	<message key="submission.history.submissionNotes">Заметки к материалу</message>
 	<message key="submission.history.viewLog">Просмотреть журнал</message>
 	<message key="submission.howToCite">Как цитировать</message>
-	<message key="submission.howToCite.citationFormats">Форматы библиографических ссылок</message>
+	<message key="submission.howToCite.citationFormats">Скачать библиографическую ссылку на данную статью в формате</message>
 	<message key="submission.indexing">Индексирование</message>
 	<message key="submission.initiated">Начата</message>
 
