@@ -378,6 +378,7 @@
 	<message key="locale.primary">Основной язык</message>
 	<message key="locale.supported">Поддерживаемые языки</message>
 	<message key="navigation.access"><![CDATA[Пользователи и роли]]></message>
+	<message key="navigation.allJournals">Журналы БГУ</message>
 	<message key="navigation.about">О нас</message>
 	<message key="navigation.admin">Администрирование</message>
 	<message key="navigation.breadcrumbLabel">Вы здесь:</message>

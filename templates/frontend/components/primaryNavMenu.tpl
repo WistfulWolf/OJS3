@@ -9,28 +9,13 @@
  *}
 <ul id="navigationPrimary" class="pkp_navigation_primary pkp_nav_list">
 
-	{if $enableAnnouncements}
-		<li>
-			<a href="{url router=$smarty.const.ROUTE_PAGE page="announcement"}">
-				{translate key="announcement.announcements"}
-			</a>
-		</li>
-	{/if}
-
 	{if $currentJournal}
 
-		{if $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
-			<li>
-				<a href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="current"}">
-					{translate key="navigation.current"}
-				</a>
-			</li>
-			<li>
-				<a href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="archive"}">
-					{translate key="navigation.archives"}
-				</a>
-			</li>
-		{/if}
+		<li>
+			<a href="{url router=$smarty.const.ROUTE_PAGE journal="index"}">
+				{translate key="navigation.allJournals"}
+			</a>
+		</li>
 
 		<li aria-haspopup="true" aria-expanded="false">
 			<a href="{url router=$smarty.const.ROUTE_PAGE page="about"}">
@@ -63,5 +48,31 @@
 				{/if}
 			</ul>
 		</li>
+
+	{/if}
+
+	{if $enableAnnouncements}
+		<li>
+			<a href="{url router=$smarty.const.ROUTE_PAGE page="announcement"}">
+				{translate key="announcement.announcements"}
+			</a>
+		</li>
+	{/if}
+
+	{if $currentJournal}
+
+		{if $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
+			<li>
+				<a href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="current"}">
+					{translate key="navigation.current"}
+				</a>
+			</li>
+			<li>
+				<a href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="archive"}">
+					{translate key="navigation.archives"}
+				</a>
+			</li>
+		{/if}
+
 	{/if}
 </ul>

@@ -376,6 +376,7 @@
 	<message key="locale.primary">Primary locale</message>
 	<message key="locale.supported">Supported locales</message>
 	<message key="navigation.access"><![CDATA[Users &amp; Roles]]></message>
+	<message key="navigation.allJournals">BSU Journals</message>
 	<message key="navigation.about">About</message>
 	<message key="navigation.admin">Administration</message>
 	<message key="navigation.breadcrumbLabel">You are here:</message>
