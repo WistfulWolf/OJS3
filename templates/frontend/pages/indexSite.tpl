@@ -25,48 +25,21 @@
 		{if !count($journals)}
 			{translate key="site.noJournals"}
 		{else}
-			<ul>
-				{iterate from=journals item=journal}
-					{capture assign="url"}{url journal=$journal->getPath()}{/capture}
-					{assign var="thumb" value=$journal->getLocalizedSetting('journalThumbnail')}
-					{assign var="description" value=$journal->getLocalizedDescription()}
-					<li{if $thumb} class="has_thumb"{/if}>
-						{if $thumb}
-							{assign var="altText" value=$journal->getLocalizedSetting('journalThumbnailAltText')}
-							<div class="thumb">
-								<a href="{$url|escape}">
-									<img src="{$journalFilesPath}{$journal->getId()}/{$thumb.uploadName|escape:"url"}"{if $altText} alt="{$altText|escape}"{/if}>
-								</a>
-							</div>
-						{/if}
-
-						<div class="body">
-							<h3>
-								<a href="{$url|escape}" rel="bookmark">
-									{$journal->getLocalizedName()}
-								</a>
-							</h3>
-							{if $description}
-								<div class="description">
-									{$description|nl2br}
-								</div>
-							{/if}
-							<ul class="links">
-								<li class="view">
-									<a href="{$url|escape}">
-										{translate key="site.journalView"}
-									</a>
-								</li>
-								<li class="current">
-									<a href="{url|escape journal=$journal->getPath() page="issue" op="current"}">
-										{translate key="site.journalCurrent"}
-									</a>
-								</li>
-							</ul>
+			{iterate from=journals item=journal}
+				{capture assign="url"}{url journal=$journal->getPath()}{/capture}
+				{assign var="thumb" value=$journal->getLocalizedSetting('journalThumbnail')}
+				{assign var="description" value=$journal->getLocalizedDescription()}
+				<div{if $thumb} class="has_thumb"{/if}>
+					{if $thumb}
+						{assign var="altText" value=$journal->getLocalizedSetting('journalThumbnailAltText')}
+						<div class="thumb">
+							<a href="{$url|escape}">
+								<img src="{$journalFilesPath}{$journal->getId()}/{$thumb.uploadName|escape:"url"}"{if $altText} alt="{$altText|escape}"{/if}>
+							</a>
 						</div>
-					</li>
-				{/iterate}
-			</ul>
+					{/if}
+				</div>
+			{/iterate}
 
 			{if $journals->getPageCount() > 0}
 				<div class="cmp_pagination">
