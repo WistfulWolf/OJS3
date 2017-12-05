@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/citationFormats/refWorks/locale/be_BY/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization strings.
+  -->
+ 
+<locale name="be_BY" full_name="Беларускi">
+	<message key="plugins.citationFormats.refWorks.displayName">Модуль формата библиографических ссылок RefWorks</message>
+	<message key="plugins.citationFormats.refWorks.citationFormatName">RefWorks</message>
+	<message key="plugins.citationFormats.refWorks.description">Реализует формат библиографических ссылок RefWorks.</message>
+	<message key="plugins.citationFormats.refWorks.export">Экспортировать в RefWorks</message>
+</locale>
