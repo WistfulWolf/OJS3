@@ -31,6 +31,7 @@
 	<locale key="nl_NL" complete="false" name="Nederlands" iso639-2b="dut" iso639-3="nld" />
 	<locale key="nb_NO" complete="false" name="Norsk Bokmål" iso639-2b="nor" iso639-3="nor" />
 	<locale key="pt_BR" complete="true"  name="Português (Brasil)" iso639-2b="por" iso639-3="por" />
+	<locale key="be_BY" complete="false" name="Беларускi" iso639-2b="by" iso639-3="by" />
 	<locale key="pt_PT" complete="false" name="Português (Portugal)" iso639-2b="por" iso639-3="por" />
 	<locale key="ru_RU" complete="false" name="Русский" iso639-2b="rus" iso639-3="rus" />
 	<locale key="sr_SR" complete="false" name="Cрпски" iso639-2b="srp" iso639-3="srp" />

@@ -1,4 +1,12 @@
 <?php return array (
+  'be_BY' => 
+  array (
+    'key' => 'be_BY',
+    'complete' => 'false',
+    'name' => 'Беларускi',
+    'iso639-2b' => 'by',
+    'iso639-3' => 'by',
+  ),
   'ca_ES' => 
   array (
     'key' => 'ca_ES',
