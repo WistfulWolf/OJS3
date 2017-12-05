@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/generic/usageEvent/locale/be_BY/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization strings.
+  -->
+ 
+<locale name="be_BY" full_name="Беларускi">
+	<message key="plugins.generic.usageEvent.displayName">Модуль «Событие использования»</message>
+	<message key="plugins.generic.usageEvent.description">Создает обработчик, который выдает событие использования сайта в определенном формате.</message>
+</locale>
