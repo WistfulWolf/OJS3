@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/reports/views/locale/be_BY/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization strings.
+  -->
+
+<locale name="be_BY" full_name="Беларускi">
+	<message key="plugins.reports.views.displayName">Модуль «Отчет о просмотрах»</message>
+	<message key="plugins.reports.views.description">Реализует отчет в формате CSV, описывающий читательский интерес к каждой статье.</message>
+
+  <message key="plugins.reports.views.articleId">ID статьи</message>
+  <message key="plugins.reports.views.articleTitle">Название статьи</message>
+  <message key="plugins.reports.views.datePublished">Дата опубликования</message>
+  <message key="plugins.reports.views.abstractViews">Просмотры аннотации</message>
+  <message key="plugins.reports.views.galleyViews">Просмотры всех гранок</message>
+</locale>
