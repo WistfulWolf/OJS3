@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/paymethod/manual/locale/be_BY/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  * Localization strings.
+  -->
+
+<locale name="be_BY" full_name="Беларускi">
+	<message key="plugins.paymethod.manual.displayName">Модуль «Ввод оплаты вручную»</message>
+	<message key="plugins.paymethod.manual.description">Позволяет менеджеру вручную ввести информацию о платеже пользователя (оплату, прошедшую вне этой системы).</message>
+	<message key="plugins.paymethod.manual">Ввод оплаты вручную</message>
+	<message key="plugins.paymethod.manual.settings">Инструкции по вводу оплаты вручную</message>
+
+	<message key="plugins.paymethod.manual.sendNotificationOfPayment">Отправить уведомление о платеже</message>
+	<message key="plugins.paymethod.manual.paymentNotification">Уведомление о платеже</message>
+	<message key="plugins.paymethod.manual.notificationSent">Уведомление о платеже отправлено</message>
+
+	<message key="plugins.paymethod.manual.purchase.title">Название</message>
+	<message key="plugins.paymethod.manual.purchase.fee">Сумма</message>	
+</locale>
