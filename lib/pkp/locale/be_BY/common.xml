@@ -2,16 +2,17 @@
 <!DOCTYPE locale SYSTEM "../../dtd/locale.dtd">
 
 <!--
-  * locale/be_BY/common.xml
+  * locale/ru_RU/common.xml
   *
   * Copyright (c) 2014-2017 Simon Fraser University
   * Copyright (c) 2000-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
-  * Localization strings for the be_BY (Беларускi) locale.
+  * Localization strings for the ru_RU (Русский) locale.
+  * Localization information: https://pkp.sfu.ca/wiki/index.php?title=OJS:_Russian_(ru_RU)
   -->
 
-<locale name="be_BY" full_name="Беларускi">
+<locale name="ru_RU" full_name="Русский">
 	<message key="common.publicKnowledgeProject">Public Knowledge Project</message>
 	<message key="common.currentStyleSheet">Бягучая табліца стыляў</message>
 	<message key="about.description">Апісанне</message>
@@ -131,8 +132,8 @@
 	<message key="common.disabled">Адключаны</message>
 	<message key="common.discipline">Дысцыпліна</message>
 	<message key="common.done">Выканана</message>
-	<message key="common.download">Скачаць</message>
-	<message key="common.downloadPdf">Скачаць PDF</message>
+	<message key="common.download">Спампаваць</message>
+	<message key="common.downloadPdf">Спампаваць PDF</message>
 	<message key="common.edit">Рэдагаваць</message>
 	<message key="common.enable">Уключыць</message>
 	<message key="common.enabled">Уключаны</message>
@@ -184,8 +185,8 @@
 	<message key="common.note">Заметка</message>
 	<message key="common.notes">Заметкі</message>
 	<message key="common.notes.tooltip">Заметкі (жоўты: ёсць новыя заметкі; сіні: ёсць прагледжаныя заметкі; шэры: няма заметак)</message>
-	<message key="common.notified">Паведамлены</message>
-	<message key="common.notified.date">Паведамлены: {$dateNotified}</message>
+	<message key="common.notified">Апавешчаны</message>
+	<message key="common.notified.date">Апавешчаны: {$dateNotified}</message>
 	<message key="common.noMatches">Няма супадзенняў</message>
 	<message key="common.off">адключана</message>
 	<message key="common.on">уключана</message>
@@ -231,7 +232,7 @@
 	<message key="common.saveAndEmail">Захаваць і адправіць</message>
 	<message key="common.save">Захаваць</message>
 	<message key="common.search">Знайсці</message>
-	<message key="common.searchQuery">Пошукавы запрос</message>
+	<message key="common.searchQuery">Пошукавы запыт</message>
 	<message key="common.second">Секунд</message>
 	<message key="common.selectAll">Выбраць усё</message>
 	<message key="common.selectNone">Адмяніць выбар</message>
@@ -240,7 +241,7 @@
 	<message key="common.size">Памер</message>
 	<message key="common.source">Крыніца</message>
 	<message key="common.status">Статус</message>
-	<message key="common.startTyping">Пачаць уводзіць з клавіатуры</message>
+	<message key="common.startTyping">Пачаць уводзіць з клавіятуры</message>
 	<message key="common.subject">Тэма</message>
 	<message key="common.subjects">Тэмы</message>
 	<message key="common.subtitle">Падзагаловак</message>
@@ -276,7 +277,7 @@
 	<message key="common.plugins">Модулі</message>
 	<message key="common.metric">Метрыка</message>
 	<message key="common.count">Лічыльнік</message>
-	<message key="debug.databaseQueries">Колькасць запросаў да БД</message>
+	<message key="debug.databaseQueries">Колькасць запытаў да БД</message>
 	<message key="debug.executionTime">Старонка створана за</message>
 	<message key="debug.memoryUsage">Выкарыстанне памяці</message>
 	<message key="debug.notes.localeListLoad">Загружаны спіс моў «{$localeList}» з XML</message>
@@ -298,7 +299,7 @@
 	<message key="email.cc">Копія</message>
 	<message key="email.compose">Адправіць пісьмо</message>
 	<message key="email.compose.tooManyRecipients">Паведамленне, якое Вы спрабуеце адправіць, змяшчае занадта многа атрымальнікаў.</message>
-	<message key="email.compose.tooSoon">Вы спрабуеце адправіць паведамленне, але пасля адпраўкі Вашага папярэдняга паведамлення прайшло занадта мала часу. Калі ласка, пачакайце перад адпраўкай наступнага паведамлення.</message>
+	<message key="email.compose.tooSoon">Вы спрабуеце адправіць паведамленне, але пасля адпраўкі Вашага папярэдняга паведамлення прайшло вельмі мала часу. Калі ласка, пачакайце перад адпраўкай наступнага паведамлення.</message>
 	<message key="email.email">Адрас электроннай пошты</message>
 	<message key="email.from">Ад</message>
 	<message key="email.invalid">Адрас электроннай пошты {$email} з'яўляецца няправільным.</message>
@@ -366,10 +367,10 @@
 	<message key="informationCenter.pastHistory">Папярэднія версіі</message>
 	<message key="informationCenter.history.noItems">Няма падзей, зарэгістраваных у журнале.</message>
 	<message key="informationCenter.history.notePosted">Дабаўлена новая заметка.</message>
-	<message key="informationCenter.history.messageSent">Паведамленне адпраўлена карыстальнікам.</message>
+	<message key="informationCenter.history.messageSent">Апавяшчэнне адпраўлена карыстальнікам.</message>
 
 	<!-- Участники этапа -->
-	<message key="stageParticipants.history.messageSent">Паведамленне адпраўлена карыстальнікам.</message>
+	<message key="stageParticipants.history.messageSent">Апавяшчэнне адпраўлена карыстальнікам.</message>
 	<message key="stageParticipants.notify.chooseMessage">Выберыце стандартнае паведамленне для выкарыстання або запоўніце форму ніжэй.</message>
 	<message key="stageParticipants.notify.message">Паведамленне</message>
 	<message key="stageParticipants.notify.warning">Калі ласка, пераканайцеся, што Вы запоўнілі поле паведамлення і выбралі хіця б аднаго атрымальніка.</message>
@@ -377,7 +378,7 @@
 	<message key="locale.primary">Асноўная мова</message>
 	<message key="locale.supported">Мовы, якія падтрымліваюцца</message>
 	<message key="navigation.access"><![CDATA[Пользователи и роли]]></message>
-	<message key="navigation.allJournals">Журналы БДУ</message>
+	<message key="navigation.allJournals">Журналы БГУ</message>
 	<message key="navigation.about">Пра нас</message>
 	<message key="navigation.admin">Адміністраванне</message>
 	<message key="navigation.breadcrumbLabel">Вы тут:</message>
@@ -421,7 +422,7 @@
 	<message key="notification.addedQuery">Дабаўлена абмеркаванне</message>
 	<message key="notification.reviewAcknowledged">Рэцэнзія адзначана як прынятая. Пісьмо электроннай пошты не адпраўлена.</message>
 	<message key="notification.updatedReviewFiles">Файлы рэцэнзіі абноўлены.</message>
-	<message key="notification.allow">Уключыць гэтыя тыпы паведамленняў.</message>
+	<message key="notification.allow">Уключыць гэтыя тыпы апавяшчэнняў.</message>
 	<message key="notification.addedAnnouncementType">Тып аб'яў дабаўлены.</message>
 	<message key="notification.editedAnnouncementType">Тып аб'яў адрэдагаваны.</message>
 	<message key="notification.removedAnnouncementType">Тып аб'яў выдалены.</message>
@@ -432,41 +433,41 @@
 	<message key="notification.editedAuthor">Аўтар адрэдагаваны.</message>
 	<message key="notification.confirmError">Пры пацвярджэнні Вашага подпісу ўзнікла памылка.</message>
 	<message key="notification.confirmSuccess">Вы былі паспяхова падпісаны.</message>
-	<message key="notification.email">Не адпраўляць мне пісьмо па электроннай пошце для наступных тыпаў паведамленняў.</message>
+	<message key="notification.email">Не адпраўляць мне пісьмо па электроннай пошце для наступных тыпаў апавяшчэнняў.</message>
 	<message key="notification.location">Перайсці па спасылцы</message>
-	<message key="notification.mailList">Спіс рассылкі паведамленняў</message>
+	<message key="notification.mailList">Спіс рассылкі апавяшчэнняў</message>
 	<message key="notification.mailList.emailInvalid">Калі ласка, увядзіце правільны адрас электроннай пошты.</message>
 	<message key="notification.mailList.privacyProtection">Правілы абароны асабістай інфармацыі</message>
 	<message key="notification.mailList.protectedContent"><![CDATA[<a href="{$subscribeUrl}">Подписаться</a> на закрытый контент.]]></message>
 	<message key="notification.mailList.submit"><![CDATA[<a href="{$submitUrl}">Отправить</a> статью]]></message>
 	<message key="notification.mailList.register">Вы можаце зарэгістравацца на гэтым сайце, каб...</message>
 	<message key="notification.mailList.review"><![CDATA[Участвовать в <a href="{$reviewUrl}">рецензировании</a>]]></message>
-	<message key="notification.noneExist">На цяперашні момант у Вас няма паведамленняў.</message>
+	<message key="notification.noneExist">На цяперашні момант у Вас няма апавяшчэнняў.</message>
 	<message key="notification.addedNote">Заметка апублікавана.</message>
 	<message key="notification.removedNote">Заметка выдалена.</message>
 	<message key="notification.removedFile">Файл выдалены.</message>
 	<message key="notification.removedSubmission">Матэрыял выдалены.</message>
-	<message key="notification.notification">Паведамленне</message>
-	<message key="notification.notifications">Паведамленні</message>
+	<message key="notification.notification">Апавяшчэнне</message>
+	<message key="notification.notifications">Апавяшчэнні</message>
 	<message key="notification.notificationsNew">({$numNew} новых)</message>
-	<message key="notification.notificationsDescription">У Вас {$unreadCount} непрачытаных паведамленняў і {$readCount} прачытаных.<![CDATA[  <a href="{$settingsUrl}">Щелкните здесь</a> для изменения Ваших настроек уведомлений.]]></message>
-	<message key="notification.sentNotification">Паведамленне адпраўлена.</message>
-	<message key="notification.settings">Наладкі паведамленняў</message>
-	<message key="notification.settingsDescription">Выберыце падзеі сістэмы, пра якія Вы хочаце атрымліваць паведамленні. Калі зняць галачку каля падзеі, то паведамленні пра гэтую падзею не будуць паказвацца ў сістэме і адпраўляцца Вам на электронную пошту. Падзеі, адзначаныя галачкамі, будуць паказвацца ў сістэме, і Вы дадаткова можаце наладзіць адпраўку гэтага паведамлення Вам на электронную пошту.</message>
+	<message key="notification.notificationsDescription">У Вас {$unreadCount} непрачытаных апавяшчэнняў і {$readCount} прачытаных.<![CDATA[  <a href="{$settingsUrl}">Щелкните здесь</a> для изменения Ваших настроек уведомлений.]]></message>
+	<message key="notification.sentNotification">Апавяшчэнне адпраўлена.</message>
+	<message key="notification.settings">Наладкі апавяшчэнняў</message>
+	<message key="notification.settingsDescription">Выберыце падзеі сістэмы, пра якія Вы хочаце атрымліваць апавяшчэнні. Калі зняць галачку каля падзеі, то апавяшчэнні пра гэтую падзею не будуць паказвацца ў сістэме і адпраўляцца Вам на электронную пошту. Падзеі, адзначаныя галачкамі, будуць паказвацца ў сістэме, і Вы дадаткова можаце наладзіць адпраўку гэтага апавяшчэння Вам на электронную пошту.</message>
 	<message key="notification.subscribe">Падпісацца</message>
-	<message key="notification.subscribeError">Ваш адрас электроннай пошты ўже падпісаны на атрыманне паведамленняў.</message>
+	<message key="notification.subscribeError">Ваш адрас электроннай пошты ўже падпісаны на атрыманне апавяшчэнняў.</message>
 	<message key="notification.subscribeSuccess">На ўказаны Вамі адрас электроннай пошты было адпраўлена пісьмо. Калі ласка, перайдзіце па спасылцы пацвярджэння ў гэтым пісьме, каб дабавіць сябе ў спіс рассылкі.</message>
 	<message key="notification.reminderError">Пры адпраўцы Вашага пароля ўзнікла памылка. Калі ласка, пераканайцеся, што Вы ўвялі правільны адрас электроннай пошты.</message>
 	<message key="notification.reminderSent">Ваш новы пароль быў адпраўлены на ўказаны Вамі адрас электроннай пошты.</message>
 	<message key="notification.unsubscribe">Адпісацца</message>
-	<message key="notification.unsubscribeError">Пры адмене Вашай падпіскі ўзнікла памылка. Калі ласка, пераканайцеся, што Вы выкарыстоўваеце правільны URL-адрас як указана ў паведамленні, якое прыйшло на Ваш адрас электроннай пошты.</message>
+	<message key="notification.unsubscribeError">Пры адмене Вашай падпіскі ўзнікла памылка. Калі ласка, пераканайцеся, што Вы выкарыстоўваеце правільны URL-адрас як указана ў апавяшчэнні, якое прыйшло на Ваш адрас электроннай пошты.</message>
 	<message key="notification.unsubscribeSuccess">Ваша падпіска паспяхова адменена.</message>
 	<message key="notification.savedSubmissionMetadata">Захаваны метаданыя матэрыялу.</message>
 	<message key="search.author">Па аўтару</message>
 	<message key="search.abstract">Анатацыя</message>
 	<message key="search.activeFilters">Пашыраныя фільтры</message>
 	<message key="search.advancedSearchMore">Дадатковыя параметры пошуку</message>
-	<message key="search.advancedSearchLess">Скрыць дадатковыя параметры пошуку</message>
+	<message key="search.advancedSearchLess">Схаваць дадатковыя параметры пошуку</message>
 	<message key="search.searchAgain">Шукаць ізноў</message>
 	<message key="search.cli.rebuildIndex.clearingIndex">Ачысціць індэкс</message>
 	<message key="search.cli.rebuildIndex.done">выканана</message>
@@ -515,8 +516,8 @@
 		</ul>]]>
 	</message>
 	<message key="reviewer.submission.reviewSchedule">Графік рэцэнзавання</message>
-	<message key="reviewer.submission.reviewRequestDate">Запрос рэдактара</message>
-	<message key="reviewer.submission.responseDueDate">Дата атрымання адказу на запрос</message>
+	<message key="reviewer.submission.reviewRequestDate">Запыт рэдактара</message>
+	<message key="reviewer.submission.responseDueDate">Дата атрымання адказу на запыт</message>
 	<message key="reviewer.submission.reviewDueDate">Дата атрымання самой рэцэнзіі</message>
 	<message key="submission.task.responseDueDate">Дата пацвярджэння атрымання рэцэнзіі</message>
 	<message key="navigation.goBack">Вярнуцца назад</message>
@@ -526,7 +527,7 @@
 	<message key="notification.addedStageParticipant">Карыстальнік дабаўлены ў якасці ўдзельніка этапу.</message>
 	<message key="notification.type.newAnnouncement">Новая аб'ява.</message>
 	<message key="notification.type.reviewAssignment">Чаканне рэцэнзіі.</message>
-	<message key="notification.type.auditorRequest">Запрос аўдыта для «{$file}»</message>
+	<message key="notification.type.auditorRequest">Запыт аўдыта для «{$file}»</message>
 	<message key="notification.type.allReviewsIn">Усе рэцэнзіі загружаны, і неабходна прыняць рашэнне на этапе «{$stage}».</message>
 	<message key="notification.type.allRevisionsIn">Новая версія файла была загружана для разгляду рэдакцыяй на этапе «{$stage}».</message>
 	<message key="notification.type.pendingRevisions">Новыя версіі разглядаюцца на этапе «{$stage}».</message>
@@ -539,7 +540,7 @@
 	<message key="user.authorization.invalidRepresentation">Няправільнае прадстаўленне.</message>
 	<message key="navigation.archives">Архівы</message>
 	<message key="user.authorization.authorRoleMissing">У дадзены момант у Вас недастаткова правоў для прагляду матэрыялу. Калі ласка, адрэдагуйце Ваш профіль, каб пераканацца ў тым, што Вам нададзены адпаведныя ролі ў раздзеле «Рэгістрацыя як».</message>
-	<message key="user.authorization.submissionAuthor">Дадзены карыстальнік не з'яўляецца аўтарам запрошанага матэрыялу. Калі ласка, праверце, што Вы ўвайшлі ў сістэму з правільным уліковым запісам карыстальніка.</message>
+	<message key="user.authorization.submissionAuthor">Дадзены карыстальнік не з'яўляецца аўтарам запытанага матэрыялу. Калі ласка, праверце, што Вы ўвайшлі ў сістэму з правільным уліковым запісам карыстальніка.</message>
 	<message key="notification.type.queryActivity">Актыўнасць абмеркаванняў.</message>
 	<message key="notification.type.queryAdded">Дабаўлена абмеркаванне.</message>
 	<message key="notification.type.assignCopyeditors">Прызначце літаратурнаго рэдактара, выкарыстоўваючы спасылку «Дабавіць» у спісе «Удзельнікі».</message>
