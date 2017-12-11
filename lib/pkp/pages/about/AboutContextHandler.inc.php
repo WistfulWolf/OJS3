@@ -92,11 +92,11 @@ class AboutContextHandler extends Handler {
 		$this->setupTemplate($request);
 		$context = $request->getContext();
 		$templateMgr->assign(array(
-			'mailingAddress'     => $context->getSetting('mailingAddress'),
+			'mailingAddress'     => $context->getLocalizedSetting('mailingAddress'),
 			'contactPhone'       => $context->getSetting('contactPhone'),
 			'contactEmail'       => $context->getSetting('contactEmail'),
-			'contactName'        => $context->getSetting('contactName'),
-			'supportName'        => $context->getSetting('supportName'),
+			'contactName'        => $context->getLocalizedSetting('contactName'),
+			'supportName'        => $context->getLocalizedSetting('supportName'),
 			'supportPhone'       => $context->getSetting('supportPhone'),
 			'supportEmail'       => $context->getSetting('supportEmail'),
 			'contactTitle'       => $context->getLocalizedSetting('contactTitle'),
