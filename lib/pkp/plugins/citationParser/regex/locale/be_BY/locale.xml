@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../dtd/locale.dtd">
+
+<!--
+  * plugins/citationParser/regex/locale/be_BY/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the be_BY (Беларускi) locale.
+  -->
+
+<locale name="be_BY" full_name="Беларускi">
+	<message key="plugins.citationParser.regex.displayName">Модуль извлечения библиографических ссылок RegEx</message>
+	<message key="plugins.citationParser.regex.description">Извлекает поля из библиографической ссылки в виде простого текста с помощью регулярных выражений.</message>
+</locale>
