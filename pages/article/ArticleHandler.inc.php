@@ -122,7 +122,8 @@ class ArticleHandler extends Handler {
 
 		// Keywords
 		$submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO');
-		$templateMgr->assign('keywords', $submissionKeywordDao->getKeywords($article->getId(), array(AppLocale::getLocale())));
+		$keywords = $submissionKeywordDao->getKeywords($article->getId(), array(AppLocale::getLocale()));
+		$templateMgr->assign('keywords', $keywords[AppLocale::getLocale()]);
 
 		// Consider public identifiers
 		$pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
