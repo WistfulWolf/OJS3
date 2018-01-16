@@ -546,4 +546,7 @@
 	<message key="notification.type.assignCopyeditors">Назначьте литературного редактора, используя ссылку «Добавить» в списке «Участники».</message>
 	<message key="notification.type.awaitingCopyedits">Ожидание литературного редактирование.</message>
 	<message key="notification.type.roundStatusTitle">Статус раунда {$round}</message>
+
+	<message key="common.onlineIssn">ISSN онлайн-версии</message>
+	<message key="common.printIssn">ISSN печатной версии</message>
 </locale>

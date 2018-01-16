@@ -543,4 +543,7 @@
 	<message key="notification.type.assignCopyeditors">Прызначце літаратурнаго рэдактара, выкарыстоўваючы спасылку «Дабавіць» у спісе «Удзельнікі».</message>
 	<message key="notification.type.awaitingCopyedits">Чаканне літаратурнага рэдагавання.</message>
 	<message key="notification.type.roundStatusTitle">Статус раўнда {$round}</message>
+
+	<message key="common.onlineIssn">ISSN онлайн-версии</message>
+	<message key="common.printIssn">ISSN печатной версии</message>
 </locale>
